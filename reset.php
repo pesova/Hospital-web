@@ -1,3 +1,11 @@
+<?php
+if (!isset($_GET['token'])) {
+    # they didnt get the token
+    header("location: forgot.php?forgot=NoToken");
+            exit();
+}
+?>
+
 <h3>Forgot Password</h3>
    <p>Reset Password associated with your account</p>
 

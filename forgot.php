@@ -49,6 +49,10 @@
                 echo "<p class='error'>Email not in database</p>";
                 exit();
             }
+            elseif($signupcheck == "NoToken"){
+                echo "<p class='error'>Cant access that page because No token available</p>";
+                exit();
+            }
             
         }
 

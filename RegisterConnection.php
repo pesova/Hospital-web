@@ -70,13 +70,3 @@ if(isset($_POST['submit'])){
             header("location: Register.php?signup=success");
             exit();
         }
-
-       
-
-/*
-$FirstName = mysqli_real_escape_string($connect, $_POST['FirstName']);
-$LastName = mysqli_real_escape_string($connect, $_POST['LastName']);
-$Email  = mysqli_real_escape_string($connect, $_POST['Email']);
-$PhoneNumber  = mysqli_real_escape_string($connect, $_POST['PhoneNumber']);
-designation  = mysqli_real_escape_string($connect, $_POST['UserName']);
-$Password  = mysqli_real_escape_string($connect, $_POST['Password']);

@@ -26,7 +26,20 @@
                 
                         if ($currentUser == $Email . ".json") {
 
-                            $token = "htht"; 
+
+                            $token = ""; 
+                            //generating random token
+                            $Alphabets = ['a','b','c','d','e','f','A','B','C','D','E','F'];
+
+                                for ($i=0; $i < 26 ; $i++) { 
+                                    # getting random texts and adding to the token
+                                    $random = mt_rand(0,count($Alphabets)-1);
+                                    $token .= $Alphabets[$random];
+                                }
+
+                                print_r($token);
+                                die();
+                            
 
                             $subject = "Password Reset Link";
                             $Message = "A password reset have been initiated from you, if you did not initiate this reset, please ignore this message, otherwise visit: http://localhost:8080/HNGTask3/reset.php?token=".$token;
