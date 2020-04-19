@@ -36,9 +36,6 @@
                                     $random = mt_rand(0,count($Alphabets)-1);
                                     $token .= $Alphabets[$random];
                                 }
-
-                                print_r($token);
-                                die();
                             
 
                             $subject = "Password Reset Link";

@@ -53,7 +53,10 @@
                 echo "<p class='error'>Cant access that page because No token available</p>";
                 exit();
             }
-            
+            elseif($signupcheck == "ResetFail"){
+                echo "<p class='error'>Reset Failed or token expired</p>";
+                exit();
+            }
         }
 
         ?>

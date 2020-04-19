@@ -17,7 +17,7 @@ if (!isset($_GET['token'])) {
     <input type= "hidden" name = "token" value = "<?php echo $_GET['token'] ?>"/>
    <p>
         <label>Email</label><br />
-        <input readonly value="[Email]"  type="text" name="Email" placeholder="Email"  />
+        <input  type="text" name="Email" placeholder="Email"  />
     </p>
     <p>
        
