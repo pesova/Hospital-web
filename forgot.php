@@ -31,27 +31,21 @@
             exit();
         }
         else{
-            $signupcheck = $_GET['signup'];
+            $signupcheck = $_GET['forgot'];
 
             if($signupcheck == "empty"){
-                echo "<p class='error'>Fill in fields!</p>";
+                echo "<p class='error'>Empty field</p>";
                 exit();
             }
-            elseif($signupcheck == "CharError"){
-                echo "<p class='error'>You used invalid characters</p>";
+            elseif($signupcheck == "codeerror"){
+                echo "<p class='error'>code error</p>";
                 exit();
             }
-            elseif($signupcheck == "Email"){
+            elseif($signupcheck == "Emailerror"){
                 echo "<p class='error'>Fill in valid email</p>";
                 exit();
             }
-            elseif($signupcheck == "success"){
-
-
-                echo "<p class='success'>You have signed up</p>";
-                
-                exit();
-            }
+            
         }
 
         ?>
