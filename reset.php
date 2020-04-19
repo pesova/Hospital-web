@@ -1,19 +1,25 @@
 <h3>Forgot Password</h3>
-   <p>Provide the email address associated with your account</p>
+   <p>Reset Password associated with your account</p>
 
    <form action="processReset.php" method="POST">
    <p>
         
     </p>
+
+    <input type= "hidden" name = "token" value = "<?php echo $_GET['token'] ?>"/>
    <p>
         <label>Email</label><br />
         <input readonly value="[Email]"  type="text" name="Email" placeholder="Email"  />
     </p>
     <p>
-        <button type="submit">Send Reset Code</button>
+       
     </p>
 
-
+    <label><b>Password</b></label>
+            <input type="Password" name="Password" value="" placeholder="Enter Password">
+            <br>
+            
+            <button type="submit">Reset Password</button>
 
 
     <?php

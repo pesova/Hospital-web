@@ -26,10 +26,16 @@
                 
                         if ($currentUser == $Email . ".json") {
 
+                            $token = "htht"; 
+
                             $subject = "Password Reset Link";
-                            $Message = "A password reset have been initiated from you, if you did not initiate this reset, please ignore this message, otherwise visit: http://localhost:8080/HNGTask3/reset.php";
+                            $Message = "A password reset have been initiated from you, if you did not initiate this reset, please ignore this message, otherwise visit: http://localhost:8080/HNGTask3/reset.php?token=".$token;
                             $headers = "From: no-reply@snh.org" . "\r\n" .
                             "CC: peso@snh.org";
+
+
+                            file_put_contents("db/tokens/". $Email . ".json", json_encode(['token'=>$token]));
+
 
                           $checking = mail($Email,$subject,$Message,$headers);
 
