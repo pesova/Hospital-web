@@ -32,6 +32,9 @@
                             "CC: peso@snh.org";
 
                           $checking = mail($Email,$subject,$Message,$headers);
+
+                         // print_r($checking);
+                         // die();
                                 if ($checking) {
                                     //display success message
 
@@ -44,7 +47,7 @@
 
                     }
         
-                        header("location: forgot.php?forgot=Negative&$counter");
+                        header("location: forgot.php?forgot=Negative");
     
     
                 }
