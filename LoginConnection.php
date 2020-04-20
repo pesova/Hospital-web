@@ -3,46 +3,15 @@
 //require_once('functions/alert.php');
 //require_once('functions/redirect.php');
 //require_once('functions/token.php');
-//require_once('functions/user.php');
+require_once('functions/FindUser.php');
+
+
 $Email  = $_POST['Email'];
 $Password  = $_POST['Password'];
 
 $_SESSION['Email'] = $Email;
 
-    
-
-function find_user($Email = ""){
-    //check the database if the user exsits
-    if(!$Email){
-        header("location: SignIn.php?Login=user_not_set");
-        die();
-    } else{
-
-    
-
-    $allUsers = scandir("db/users/"); //return @array (2 filled)
-    $countAllUsers = count($allUsers);
-
-    for ($counter = 0; $counter < $countAllUsers ; $counter++) {
-       
-        $currentUser = $allUsers[$counter];
-
-        if($currentUser == $Email . ".json"){
-          //check the user password.
-            $userString = file_get_contents("db/users/".$currentUser);
-            $userObject = json_decode($userString);
-                       
-            return $userObject;
-          
-        }        
-        
-    }
-
-    return false;
-}
-}
-
-
+    //find User (Function) 
     $currentUser = find_user($Email); 
 
     if($currentUser){
@@ -90,4 +59,3 @@ function find_user($Email = ""){
         die();
         
     }        
-    
