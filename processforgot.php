@@ -54,7 +54,7 @@
                                 if ($checking) {
                                     //display success message
 
-                                    header("location: SignIn.php?forgot=codeSent");
+                                    header("location: forgot.php?forgot=codeSent");
                                 }else{
                                     header("location: forgot.php?forgot=codeerror");
                                 }

@@ -144,7 +144,36 @@
             </p>
         
     </div>
- 
+    <?php
+        //error handlers
+        if(!isset($_GET['signup'])){
+            exit();
+        }
+        else{
+            $signupcheck = $_GET['signup'];
+
+            if($signupcheck == "empty"){
+                echo "<p class='error'>Fill in fields!</p>";
+                exit();
+            }
+            elseif($signupcheck == "CharError"){
+                echo "<p class='error'>You used invalid characters</p>";
+                exit();
+            }
+            elseif($signupcheck == "Email"){
+                echo "<p class='error'>Fill in valid email</p>";
+                exit();
+            }
+            elseif($signupcheck == "success"){
+
+
+                echo "<p class='success'>You have signed up</p>";
+                
+                exit();
+            }
+        }
+
+        ?>
         
         
        

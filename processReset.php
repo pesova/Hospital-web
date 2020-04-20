@@ -36,12 +36,27 @@ for ($counter = 0; $counter < $countAllUsersToken ; $counter++) {
                         $userString = file_get_contents("db/users/".$currentUser);
                         $userObject = json_decode($userString);
 
-      //check the user Password.
-        $userObject->Password = ; 
+                        //changing the user Password.
+                        $userObject->Password = password_hash($Password, PASSWORD_DEFAULT); 
 
-        
-    
+                        unlink("db/users/".$currentUser);//file delete, user data deleted
+
+                        file_put_contents("db/users/". $Email . ".json", json_encode($userObject));
+
+                        //Telling User in Email that password has Reset Successfully
+                        $subject = "Password Reset Successfully";
+                        $Message = "Your Password On SNH Has been updated successfully, If you didnt Initiate the Password Visit snh.org and reset Your Password";
+                        $headers = "From: no-reply@snh.org" . "\r\n" .
+                        "CC: peso@snh.org";
+
+                        $checking = mail($Email,$subject,$Message,$headers);
+
+                        header("location: SignIn.php?Login=passwordResetSuccess");
+                        die();
+                     }
+
+                }
+                 header("location: forgot.php?forgot=ResetFail");
         }
-
     }
-    header("location: forgot.php?forgot=ResetFail");
+}

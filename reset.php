@@ -23,7 +23,7 @@ if (!isset($_GET['token'])) {
        
     </p>
 
-    <label><b>Password</b></label>
+    <label><b>New Password</b></label>
             <input type="Password" name="Password" value="" placeholder="Enter Password">
             <br>
             

@@ -92,14 +92,12 @@ p {
 
 .error {
     color: red;
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-    bottom: 770px;
+    font-size: 20px;
 }
 
 .success {
     color: green;
+    font-size: 20px;
 }
 
 .patient {

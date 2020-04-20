@@ -14,7 +14,7 @@ $_SESSION['Email'] = $Email;
 function find_user($Email = ""){
     //check the database if the user exsits
     if(!$Email){
-        header("location: SignIn.php?error=user_not_set");
+        header("location: SignIn.php?Login=user_not_set");
         die();
     } else{
 
@@ -81,7 +81,7 @@ function find_user($Email = ""){
             //header("location: dashboard.php?success");
             
         } else{
-            header("location: SignIn.php?error=wrongpass");
+            header("location: SignIn.php?Login=wrongpass");
             die();
         }
       

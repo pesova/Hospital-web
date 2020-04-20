@@ -57,6 +57,10 @@
                 echo "<p class='error'>Reset Failed or token expired</p>";
                 exit();
             }
+            elseif($signupcheck == "codeSent"){
+                echo "<p class='error'>Reset Token sent, Check Your Email</p>";
+                exit();
+            }
         }
 
         ?>
