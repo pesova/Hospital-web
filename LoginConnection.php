@@ -86,7 +86,7 @@ function find_user($Email = ""){
         }
       
     } else{
-        header("location: SignIn.php?error=wrong");
+        header("location: SignIn.php?Login=wrongUser");
         die();
         
     }        

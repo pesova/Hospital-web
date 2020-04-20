@@ -1,3 +1,5 @@
+<?php require_once('functions/alert.php');?>
+
 <!DOCTYPE html>
   <html>
   <head>
@@ -79,6 +81,10 @@
             }
             elseif($signIncheck == "user_not_set"){
                 echo "<p class='error'>Empty Fields</p>";
+                exit();
+            }
+            elseif($signIncheck == "wrongUser"){
+                echo "<p class='error'>User Not in Database</p>";
                 exit();
             }
         }
