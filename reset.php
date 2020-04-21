@@ -1,3 +1,5 @@
+<?php require_once('functions/alert.php');?>
+
 <?php
 if (!isset($_GET['token'])) {
     # they didnt get the token
@@ -30,33 +32,7 @@ if (!isset($_GET['token'])) {
             <button type="submit">Reset Password</button>
 
 
-    <?php
-        //error handlers
-        if(!isset($_GET['forgot'])){
-            exit();
-        }
-        else{
-            $signupcheck = $_GET['forgot'];
+           <?php ResetAlert(); //error Handler?>
 
-            if($signupcheck == "empty"){
-                echo "<p class='error'>Empty field</p>";
-                exit();
-            }
-            elseif($signupcheck == "codeerror"){
-                echo "<p class='error'>code error</p>";
-                exit();
-            }
-            elseif($signupcheck == "Emailerror"){
-                echo "<p class='error'>Fill in valid email</p>";
-                exit();
-            }
-            elseif($signupcheck == "Negative"){
-                echo "<p class='error'>Email not in database</p>";
-                exit();
-            }
-            
-        }
-
-        ?>
    </form>
     

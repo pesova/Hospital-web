@@ -1,3 +1,6 @@
+<?php require_once('functions/alert.php');?>
+<?php session_start(); ?>
+
   <!DOCTYPE html>
   <html>
   <head>
@@ -8,12 +11,7 @@
 
       <link rel="stylesheet" href="style.css">
       
-      
-
-     
-      <script src="main.js"></script>
       </head>
-      <body>
     
     <div class="mainContainer">
 
@@ -144,36 +142,7 @@
             </p>
         
     </div>
-    <?php
-        //error handlers
-        if(!isset($_GET['signup'])){
-            exit();
-        }
-        else{
-            $signupcheck = $_GET['signup'];
-
-            if($signupcheck == "empty"){
-                echo "<p class='error'>Fill in fields!</p>";
-                exit();
-            }
-            elseif($signupcheck == "CharError"){
-                echo "<p class='error'>You used invalid characters</p>";
-                exit();
-            }
-            elseif($signupcheck == "Email"){
-                echo "<p class='error'>Fill in valid email</p>";
-                exit();
-            }
-            elseif($signupcheck == "success"){
-
-
-                echo "<p class='success'>You have signed up</p>";
-                
-                exit();
-            }
-        }
-
-        ?>
+    <?php RegisterAlert()  //error handlers?>
         
         
        

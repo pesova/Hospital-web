@@ -1,4 +1,6 @@
-  
+<?php require_once('functions/alert.php');?>
+
+
    <h3>Forgot Password</h3>
    <p>Provide the email address associated with your account</p>
 
@@ -24,45 +26,7 @@
 
 
 
-
-    <?php
-        //error handlers
-        if(!isset($_GET['forgot'])){
-            exit();
-        }
-        else{
-            $signupcheck = $_GET['forgot'];
-
-            if($signupcheck == "empty"){
-                echo "<p class='error'>Empty field</p>";
-                exit();
-            }
-            elseif($signupcheck == "codeerror"){
-                echo "<p class='error'>code error</p>";
-                exit();
-            }
-            elseif($signupcheck == "Emailerror"){
-                echo "<p class='error'>Fill in valid email</p>";
-                exit();
-            }
-            elseif($signupcheck == "Negative"){
-                echo "<p class='error'>Email not in database</p>";
-                exit();
-            }
-            elseif($signupcheck == "NoToken"){
-                echo "<p class='error'>Cant access that page because No token available</p>";
-                exit();
-            }
-            elseif($signupcheck == "ResetFail"){
-                echo "<p class='error'>Reset Failed or token expired</p>";
-                exit();
-            }
-            elseif($signupcheck == "codeSent"){
-                echo "<p class='error'>Reset Token sent, Check Your Email</p>";
-                exit();
-            }
-        }
-
-        ?>
+ 
+    <?php forgotAlert()  //error handlers?>
    </form>
     

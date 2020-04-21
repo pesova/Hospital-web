@@ -43,10 +43,15 @@ $_SESSION['Email'] = $Email;
             //redirecting to different page
             if ($userObject->designation == 'Patient') {
                 header("location: patient.php");
-            } else{
+            } elseif ($userObject->designation == 'Medical Team (MT)') {
                 header("location: medical.php");
+            }elseif ($userObject->designation == 'SuperAdmin') {
+                header("location: superAdmin.php");
             }
-            
+            else{
+                header("location: SignIn.php?Login=UserNotFound");
+                die();
+            }
             //header("location: dashboard.php?success");
             
         } else{

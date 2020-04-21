@@ -21,4 +21,8 @@ echo "This page is for the super Admin"
 
 <a href="Register.php">Add users</a>
 
+<a href="AllPatients.php">View Patients</a>
+
+<a href="AllStaffs.php">All Staffs</a>
+
 </div>
