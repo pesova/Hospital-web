@@ -9,48 +9,50 @@
   </head>
           <body>
 
-                <h2>  All Patients</h2>
+                <h2>  All Appointments</h2>
 
 
 
           <?php
 
-             $allUsers = scandir("db/users/");
-             $countAllUsers = count($allUsers);
+             $allAppointments = scandir("db/Appointments/");
+             $countAllAppointments = count($allAppointments);
 
 
 
-             for ($counter = 2; $counter < $countAllUsers ; $counter++) {
+             for ($counter = 2; $counter < $countAllAppointments ; $counter++) {
 
-                   $currentUser = $allUsers[$counter];
+                   $currentAppointment = $allAppointments[$counter];
 
-                     $userString = file_get_contents("db/users/".$currentUser);
-                     $userObject = json_decode($userString);
+                     $AppointmentString = file_get_contents("db/Appointments/".$currentAppointment);
+                     $AppointmentObject = json_decode($AppointmentString);
 
 
-                     if ($userObject->designation == 'Patient') {
+                     if ($AppointmentObject == true) {
                        // show patients only
-                         $id = $userObject->id;
-                         $first_name = $userObject->first_name;
-                         $last_name = $userObject->last_name;
-                         $email = $userObject->Email;
-                         $gender = $userObject->gender;
-                         $designation = $userObject->designation;
-                         $department = $userObject->department;
+                         $id = $AppointmentObject->id;
+                         $Fullname = $AppointmentObject->FullName;
+                         $email = $AppointmentObject->Email;
+                         $Date = $AppointmentObject->Date;
+                         $Time = $AppointmentObject->Time;
+                         $Nature = $AppointmentObject->Nature;
+                         $Complaint = $AppointmentObject->Complaint;
+                         $department = $AppointmentObject->department;
 
-                         echo "ID: $id <br />";
-                         echo "FirstName: $first_name <br />";
-                         echo "LastName: $last_name <br />";
-                         echo "Email: $email <br />";
-                         echo "Gender: $gender <br />";
-                         echo "Designation: $designation <br />";
-                         echo "Department: $department <br />";
+                         echo "<b>ID:</b> $id <br />";
+                         echo "<b>FirstName:</b> $Fullname <br />";
+                         echo "<b>Email:</b> $email <br />";
+                         echo "<b>Date:</b> $Date <br />";
+                         echo "<b>Time:</b> $Time <br />";
+                         echo "<b>Nature:</b> $Nature <br />";
+                         echo "<b>Initial Complaint:</b> $Complaint <br />";
+                         echo "<b>Department:</b> $department <br />";
 
                          echo "<hr>";
 
                      } else {
-                       // not patients
-                       echo " ";
+                       // no Appointment
+                       echo "No Appointment Available";
                      }
 
 
@@ -58,7 +60,7 @@
 
 
          ?>
-         <a href="superAdmin.php">Dashboard</a>
+         <a href="medical.php">Dashboard</a>
 
       </body>
   </html>
