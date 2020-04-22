@@ -1,4 +1,4 @@
-
+<?php require_once('functions/alert.php');?>
 <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +7,50 @@
       <link rel="stylesheet" href="style.css">
 
   </head>
-<div class="patient">
 
-<h3>Dashboard</h3>
+  <body>
+    <div class="patient">
 
-<hr>
-<?php
+    <h3>Dashboard</h3>
 
-echo "<h1><p>This page is for Patient</p></h1>"
-?>
-<br>
-<div class="patient">
+    <hr>
+    <?php
 
-<?php session_start();?>
+    echo "<h1><p>This page is for Patient</p></h1>"
+    ?>
+    <br>
+    <div class="patient">
+
+    <?php session_start();?>
 
 
 
-<B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
+    <B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
 
-<?php (getdate());
-echo "<br><br>";
+    <?php (getdate());
+    echo "<br><br>";
 
-$mydate = getdate(date("U"));
-?>
+    $mydate = getdate(date("U"));
+    ?>
 
-<pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+    <pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
 
-<pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
+    <pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
 
-<br>
+    <br>
 
-<div class="Action">
-    <a href="index.php">Home</a>
+    <div class="Action">
+        <a href="index.php">Home</a>
 
-    <a href="BookAppointment.php">Book Appointment</a>
+        <a href="BookAppointment.php">Book Appointment</a>
 
-    <a href="Paybills.php">Paybills</a>
-  </div>
+        <a href="Paybills.php">Paybills</a>
+      </div>
 
-<div class="logout">
-    <a href="logout.php">Logout</a>
-</div>
+    <div class="logout">
+        <a href="logout.php">Logout</a>
+    </div>
+<?php Appointment(); ?>
+    </div>
 
-</div>
+  </body>

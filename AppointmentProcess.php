@@ -14,32 +14,28 @@ $Department  = $_POST['Department'];
 if(isset($_POST['submit'])){
 
 
-                    $allUsers = scandir("db/users/"); //return @array (2 filled)
-                    $countAllUsers = count($allUsers);
-                    $newUserId = ($countAllUsers-1);
+                    $allAppointments = scandir("db/Appointments/");
+                    $countAllAppointments = count($allAppointments);
+                    $newAppoinmtmentId = ($countAllAppointments-1);
 
-                    $userObject = [
-                        'id'=>$newUserId,
-                        'first_name'=>$FirstName,
-                        'last_name'=>$LastName,
+                    $AppointmentObject = [
+                        'id'=>$newAppoinmtmentId,
+                        'FullName'=>$FullName,
                         'Email'=>$Email,
-                        'Password'=> password_hash($Password, PASSWORD_DEFAULT), //password hashing
-                        'gender'=>$Gender,
-                        'designation'=>$designation,
+                        'Date'=> $Date,
+                        'Time'=>$Time,
+                        'Nature'=>$Nature,
+                        'Complaint'=>$Complaint,
                         'department'=>$Department
                     ];
 
-                        file_put_contents("db/users/". $userObject['Email'] . ".json", json_encode($userObject));
+                        file_put_contents("db/Appointments/". $AppointmentObject['Email'] . ".json", json_encode($AppointmentObject));
 
-                        header("location: SignIn.php?success");
+                        header("location: patient.php?Appointment=success");
 
                 }
-            }
-        }
-    }
-
         // user didnt click submit
             else{
-            header("location: Register.php?signup=ClickRegister");
+          header("location: BookAppointment.php?Appointment=error");
             exit();
         }

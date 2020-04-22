@@ -1,3 +1,5 @@
+<?php require_once('functions/alert.php');?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,7 @@
 
 <?php session_start();?>
 
-      <form class="form" action="AppointmentProcess" method="post">
+      <form class="form" action="AppointmentProcess.php" method="post">
 
         <label><b>FullName</b></label>
                    <input readonly type="text" name="Name" value=" <?php echo $_SESSION['fullname'] ?>">
@@ -71,6 +73,6 @@
 
 
       </form>
-
+<?php Appointment(); ?>
  </body>
  </html>

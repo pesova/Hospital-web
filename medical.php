@@ -14,14 +14,14 @@
 
 <hr>
 
-<?php 
+<?php
 
 echo "<h1><p>This page is for medical</p></h1>";
 ?>
 
 <br> <br>
 <?php session_start();?>
- 
+
 
 <B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
 
@@ -36,12 +36,14 @@ $mydate = getdate(date("U"));
   <pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
 
 
-  <div class="logout">
+  <div class="Action">
     <a href="index.php">Home</a>
+
+    <a href="AllAppointments.php">All Appointments</a>
+
   </div>
 
   <div class="logout">
     <a href="logout.php">Logout</a>
   </div>
 </div>
-

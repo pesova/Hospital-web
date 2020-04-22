@@ -65,7 +65,7 @@ else{
         exit();
     }
     elseif($forgotcheck == "codeSent"){
-        echo "<p class='error'>Reset Token sent, Check Your Email</p>";
+        echo "<p class='success'>Reset Token sent, Check Your Email</p>";
         exit();
     }
 }
@@ -97,18 +97,18 @@ else{
 
 
                 echo "<p class='success'>You have signed up</p>";
-                
+
                 exit();
             }
         }
 
         }
-        
+
 
 
 //Reset Errors Alert Function
     function ResetAlert(){
-        
+
         if(!isset($_GET['forgot'])){
             exit();
         }
@@ -131,6 +131,27 @@ else{
                 echo "<p class='error'>Email not in database</p>";
                 exit();
             }
-            
+
         }
-    } 
+    }
+
+
+
+//Appointment message
+function Appointment(){
+    if(!isset($_GET['Appointment'])){
+    exit();
+}
+else{
+    $Appointmentcheck = $_GET['Appointment'];
+
+    if($Appointmentcheck == "success"){
+        echo "<p class='success'>Appointment Booked Successfully</p>";
+        exit();
+    }
+    elseif($Appointmentcheck == "error"){
+        echo "<p class='error'>Wrong Email or Password</p>";
+        exit();
+    }
+  }
+}
