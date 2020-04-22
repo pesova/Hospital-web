@@ -29,19 +29,19 @@
                      <br>
 
                 <label><b>Date of Appointment</b></label>
-                  <input type="date" name="date" value="">
+                  <input type="date" name="date" value=""required>
 
                   <br>
                   <br>
 
                   <label><b>Time</b></label>
-                  <input type="time" name="Time" value="">
+                  <input type="time" name="Time" value="" required>
 
                   <br>
 
 
                   <label><b>Nature Of Appointment</b></label>  <br>
-                  <select id="select" name="Gender" id="Gender">
+                  <select id="select" name="Nature" id="Gender">
                       <option value="">Select One</option>
                       <option>Purchase</option>
                       <option>Complaint</option>
@@ -52,16 +52,16 @@
 
             <label><b>Initial Complaint</b></label>
             <br>
-            <textarea name="Complaint" rows="8" cols="80"></textarea>
+            <textarea name="Complaint" rows="6" cols="80" placeholder="Enter Your Request Here" required></textarea>
 
             <br><br>
 
                   <label><b>Department</b></label>
-                  <input type="text" name="Department" value="" placeholder="Enter Department">
+                  <input type="text" name="Department" value="" placeholder="Enter Department" required>
 
                   <br>
 
-                  <button type="submit" name="submit">Sign Up</button>
+                  <button type="submit" name="submit">Book Appointment</button>
 
                   <p>
                           <a href="patient.php">Cancle Appointment</a><br /> <br>

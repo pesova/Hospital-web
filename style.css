@@ -39,6 +39,7 @@ textarea{
   border-radius: 20px;
   outline: none;
   background-color: rgb(243, 243, 243);
+  font-size: 120%;
 }
 
 a {
