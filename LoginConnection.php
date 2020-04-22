@@ -11,8 +11,8 @@ $Password  = $_POST['Password'];
 
 $_SESSION['Email'] = $Email;
 
-    //find User (Function) 
-    $currentUser = find_user($Email); 
+    //find User (Function)
+    $currentUser = find_user($Email);
 
     if($currentUser){
       //check the user Password.
@@ -21,10 +21,10 @@ $_SESSION['Email'] = $Email;
         $passwordFromDB = $userObject->Password;
 
         $passwordFromUser = password_verify($Password, $passwordFromDB);
-        
+
         if($passwordFromDB == $passwordFromUser){
             //redicrect to dashboard
-            $_SESSION['loggedIn'] = $userObject->id; 
+            $_SESSION['loggedIn'] = $userObject->id;
             $_SESSION['Email'] = $userObject->Email;
             $_SESSION['fullname'] = $userObject->first_name . " " . $userObject->last_name;
             $_SESSION['role'] = $userObject->designation;
@@ -53,14 +53,14 @@ $_SESSION['Email'] = $Email;
                 die();
             }
             //header("location: dashboard.php?success");
-            
+
         } else{
             header("location: SignIn.php?Login=wrongpass");
             die();
         }
-      
+
     } else{
         header("location: SignIn.php?Login=wrongUser");
         die();
-        
-    }        
+
+    }

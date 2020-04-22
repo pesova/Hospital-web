@@ -12,7 +12,7 @@
 <h3>Dashboard</h3>
 
 <hr>
-<?php 
+<?php
 
 echo "<h1><p>This page is for Patient</p></h1>"
 ?>
@@ -37,8 +37,12 @@ $mydate = getdate(date("U"));
 
 <br>
 
-<div class="logout">
+<div class="Action">
     <a href="index.php">Home</a>
+
+    <a href="BookAppointment.php">Book Appointment</a>
+
+    <a href="Paybills.php">Paybills</a>
   </div>
 
 <div class="logout">

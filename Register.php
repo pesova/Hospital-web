@@ -10,9 +10,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="stylesheet" href="style.css">
-      
+
       </head>
-    
+
     <div class="mainContainer">
 
     <body>
@@ -25,10 +25,10 @@
         <div class="reg">
         <p><strong>Welcome, Please Register</strong></p>
         </div>
-    
+
          <form class="form" action="RegisterConnection.php" method="POST">
-            
-         <?php 
+
+         <?php
          if(isset($_GET['FirstName'])){
              $FirstName = $_GET['FirstName'];
              echo '<label><b>FirstName</b></label>
@@ -50,7 +50,7 @@
             <input type="text" name="LastName" value="" placeholder="Enter LastName">';
         }
          ?>
-                     
+
             <br>
             <?php
 
@@ -74,18 +74,18 @@
             <label for=""><b>Gender</b></label>  <br>
             <select id="select" name="Gender" id="Gender">
                 <option value="">Select One</option>
-                <option <?php              
+                <option <?php
             if(isset($_SESSION['Gender']) && $_SESSION['Gender'] == 'Male'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Male</option>
 
 
-                <option <?php              
+                <option <?php
             if(isset($_SESSION['Gender']) && $_SESSION['Gender'] == 'Female'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Female</option>
             </select>
@@ -96,19 +96,19 @@
             <select id="select" name="designation" >
 
                 <option value="">Select One</option>
-                <option 
-        <?php              
+                <option
+        <?php
             if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Medical Team (MT)'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Medical Team (MT)</option>
-                
-                <option 
-                <?php              
+
+                <option
+                <?php
                 if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Patient'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
                 ?>
                   >Patient</option>
                  </select>
@@ -131,21 +131,21 @@
 
         ?>
 
-                       
+
             <br>
-            
+
             <button type="submit" name="submit">Sign Up</button>
-         
+
             <p>
                     <a href="forgot.php">Forgot Password</a><br /> <br>
                     <a href="Signin.php">Already have an account? Login</a>
             </p>
-        
+
     </div>
     <?php RegisterAlert()  //error handlers?>
-        
-        
-       
+
+
+
         </form>
     </body>
 
