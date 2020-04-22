@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>All Staffs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php require_once('Lib/header.php');?>
 
-    <link rel="stylesheet" href="bootstrap-4.4.1-dist\css\bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  </head>
-          <body>
-
+<title>All Appointments</title>
                 <h2>  All Appointments</h2>
 
 
@@ -21,17 +11,20 @@
              $countAllAppointments = count($allAppointments);
         ?>
 
-        <div class="table">
-             <table>
-                 <thead>
-                   <th><b>ID:</b></th>
-                   <th><b>FullName:</b></th>
-                   <th><b>Email:</b></th>
-                   <th><b>Date:</b></th>
-                   <th><b>Time:</b></th>
-                   <th><b>Nature:</b></th>
-                   <th><b>Initial Complaint:</b></th>
-                   <th><b>Department:</b></th>
+        <div class="table table-bordered table-hover table-responsive-sm">
+             <table class="table-responsive-sm">
+                 <thead class="thead-light ">
+                  <tr class="col-sm-4">
+                    <th><b>ID:</b></th>
+                    <th><b>FullName:</b></th>
+                    <th><b>Email:</b></th>
+                    <th><b>Date:</b></th>
+                    <th><b>Time:</b></th>
+                    <th><b>Nature:</b></th>
+                    <th class="col"><b>Initial Complaint:</b></th>
+                    <th><b>Department:</b></th>
+                  </tr>
+
                  </thead>
 
 
@@ -74,19 +67,13 @@
                     }
        ?>
                  </tr>
+              </table>
 
-
-</table>
-
-</div>
+            </div>
 
 <br>
 
          <a href="medical.php">Dashboard</a>
 
 
-
-
-
-      </body>
-  </html>
+<?php require_once('Lib/footer.php');?>
