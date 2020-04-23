@@ -4,6 +4,20 @@
 
                 <h2>  All Staffs</h2>
 
+                <div class="table table-bordered table-hover table-responsive-sm">
+                     <table class="table-responsive-sm">
+                         <thead class="thead-light ">
+                          <tr class="">
+                            <th><b>ID</b></th>
+                            <th><b>FirstName</b></th>
+                            <th><b>LastName</b></th>
+                            <th class="col"><b>Email</b></th>
+                            <th><b>Gender</b></th>
+                            <th><b>Designation</b></th>
+                            <th><b>Department</b></th>
+                          </tr>
+
+                         </thead>
 
 
           <?php
@@ -14,7 +28,8 @@
 
 
              for ($counter = 2; $counter < $countAllUsers ; $counter++) {
-
+               echo "<tr>";
+                 echo "<!--run the printing all staffs loop -->";
                    $currentUser = $allUsers[$counter];
 
                      $userString = file_get_contents("db/users/".$currentUser);
@@ -31,26 +46,25 @@
                          $designation = $userObject->designation;
                          $department = $userObject->department;
 
-                         echo "ID: $id <br />";
-                         echo "FirstName: $first_name <br />";
-                         echo "LastName: $last_name <br />";
-                         echo "Email: $email <br />";
-                         echo "Gender: $gender <br />";
-                         echo "Designation: $designation <br />";
-                         echo "Department: $department <br />";
+     ?>
+                         <td><?php  echo "$id" ?></td>
+                         <td><?php  echo "$first_name" ?></td>
+                         <td><?php  echo "$last_name" ?></td>
+                         <td><?php  echo "$email" ?></td>
+                         <td><?php echo "$gender" ?></td>
+                         <td><?php  echo "$designation" ?></td>
+                         <td><?php  echo "$department" ?></td>
+  <?php
+                      } else {
+                        // not staff
+                        echo " ";
+                      }
+                    }
+ ?>
 
-                         echo "<hr>";
-
-                     } else {
-                       // not patients
-                       echo " ";
-                     }
-
-
-             }
-
-
-         ?>
-         <a href="superAdmin.php">Dashboard</a>
+                         </tr>
+                       </table>
+                     </div>
+         <a class="login  btn btn-primary" href="superAdmin.php">Dashboard</a>
 
 <?php require_once('Lib/footer.php');?>

@@ -5,21 +5,21 @@
 
 <div class="container-fluid">
 
-<?php
 
-echo "This page is for the super Admin"
-?>
 
-<div class="logout">
-    <a href="logout.php">Logout</a>
+  <p class="lead display-4">This page is for the super Admin</p>
+
+  <br>
+  <br>
+    <div class="">
+      <a class="Register login  btn btn-secondary btn-lg" href="logout.php">Logout</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="Register.php">Add users</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="AllPatients.php">View Patients</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="AllStaffs.php">All Staffs</a>
+    </div>
   </div>
-
-<a href="Register.php">Add users</a>
-
-<a href="AllPatients.php">View Patients</a>
-
-<a href="AllStaffs.php">All Staffs</a>
-
-</div>
 
 <?php require_once('Lib/footer.php');?>
