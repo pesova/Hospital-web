@@ -30,10 +30,11 @@
     $mydate = getdate(date("U"));
     ?>
 
-    <pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+    <pre class="text-danger">Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
 
-    <pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
+    <pre class="text-danger">Logged in date: <?php echo  $_SESSION['Date']?></pre>
 
+    <br>
     <br>
 
     <div class="Action">

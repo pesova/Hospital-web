@@ -3,7 +3,7 @@
 
 
 
-<div class="superAdmin">
+<div class="container-fluid">
 
 <?php
 

@@ -4,11 +4,9 @@
       <title>medical</title>
 </head>
 
-  <div class="medical">
+  <div class="container-fluid">
 
         <h3>Dashboard</h3>
-
-<hr>
 
 <?php
 
@@ -19,7 +17,7 @@ echo "<h1><p>This page is for medical</p></h1>";
 <?php session_start();?>
 
 
-<B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
+<B class="lead font-weight-bolder">Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
 
 <?php (getdate());
 echo "<br><br>";
@@ -27,21 +25,22 @@ echo "<br><br>";
 $mydate = getdate(date("U"));
 ?>
 
-    <pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+    <pre class="text-danger">Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
 
-  <pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
+  <pre class="text-danger">Logged in date: <?php echo  $_SESSION['Date']?></pre>
+
+  <br>
+  <br>
 
 
   <div class="Action">
-    <a href="index.php">Home</a>
+    <a class="login  btn btn-primary" href="index.php">Home</a>
 
-    <a href="AllAppointments.php">All Appointments</a>
+    <a class="login  btn btn-info" href="AllAppointments.php">All Appointments</a>
 
+    <a class="login  btn btn-secondary" href="logout.php">Logout</a>
   </div>
 
-  <div class="logout">
-    <a href="logout.php">Logout</a>
-  </div>
 </div>
 
 <?php require_once('Lib/footer.php');?>

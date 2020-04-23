@@ -73,7 +73,7 @@
 
 <br>
 
-         <a href="medical.php">Dashboard</a>
+         <a class="login  btn btn-primary" href="medical.php">Dashboard</a>
 
 
 <?php require_once('Lib/footer.php');?>

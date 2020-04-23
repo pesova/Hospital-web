@@ -16,7 +16,7 @@
 
 
         <div class="reg">
-        <p><strong>Welcome, Login</strong></p>
+        <p class="lead"><strong>Welcome, Login</strong></p>
         </div>
 
         <div class="mainContainer">
@@ -33,7 +33,7 @@
             if(isset($_SESSION['Email'])){
                 echo "value=" . $_SESSION['Email'];
             }
-        ?>  type="text" name="Email"  placeholder="Enter Email">';
+        ?>  type="text" name="Email"  placeholder="Enter Email">
 
 
 
@@ -61,5 +61,4 @@
         </div>
 
         <?php message(); ?>
-  </body>
-  </html>
+<?php require_once('Lib/footer.php');?>

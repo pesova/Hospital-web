@@ -15,12 +15,8 @@
 
     <div class="mainContainer">
 
-    <body>
-        
 
-        <hr>
-
-        <div class="reg">
+        <div class="display-4">
         <p><strong>Welcome, Please Register</strong></p>
         </div>
 
