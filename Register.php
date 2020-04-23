@@ -16,9 +16,7 @@
     <div class="mainContainer">
 
     <body>
-        <div>
-         <a  class="startng" href="index.php">StartNG Hospital</a>
-        </div>
+        
 
         <hr>
 

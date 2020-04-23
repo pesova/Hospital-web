@@ -74,5 +74,5 @@
 
       </form>
 <?php Appointment(); ?>
- </body>
- </html>
+
+<?php require_once('Lib/footer.php');?>

@@ -1,16 +1,11 @@
-<head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php require_once('Lib/header.php');?>
       <title>superAdmin</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
 
-  </head>
 
 
 <div class="superAdmin">
 
-<?php 
+<?php
 
 echo "This page is for the super Admin"
 ?>
@@ -26,3 +21,5 @@ echo "This page is for the super Admin"
 <a href="AllStaffs.php">All Staffs</a>
 
 </div>
+
+<?php require_once('Lib/footer.php');?>

@@ -43,3 +43,5 @@ $mydate = getdate(date("U"));
     <a href="logout.php">Logout</a>
   </div>
 </div>
+
+<?php require_once('Lib/footer.php');?>

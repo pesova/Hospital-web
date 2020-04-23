@@ -7,9 +7,10 @@
   <body>
     <div class="patient">
 
-    <h3>Dashboard</h3>
+      <br>
 
-    <hr>
+    <h3 class="nav-item">Dashboard</h3>
+
     <?php
 
     echo "<h1><p>This page is for Patient</p></h1>"
@@ -49,4 +50,4 @@
 <?php Appointment(); ?>
     </div>
 
-  </body>
+<?php require_once('Lib/footer.php');?>

@@ -51,6 +51,4 @@
 
          ?>
          <a href="superAdmin.php">Dashboard</a>
-
-      </body>
-  </html>
+<?php require_once('Lib/footer.php');?>

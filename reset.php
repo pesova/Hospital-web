@@ -1,4 +1,5 @@
 <?php require_once('functions/alert.php');?>
+<?php require_once('Lib/header.php');?>
 
 <?php
 if (!isset($_GET['token'])) {
@@ -9,11 +10,11 @@ if (!isset($_GET['token'])) {
 ?>
 
 <h3>Forgot Password</h3>
-   <p>Reset Password associated with your account</p>
+   <p class="lead text-uppercase font-weight-bolder">Reset Password associated with your account</p>
 
-   <form action="processReset.php" method="POST">
+   <form class="form" action="processReset.php" method="POST">
    <p>
-        
+
     </p>
 
     <input type= "hidden" name = "token" value = "<?php echo $_GET['token'] ?>"/>
@@ -22,17 +23,18 @@ if (!isset($_GET['token'])) {
         <input  type="text" name="Email" placeholder="Email"  />
     </p>
     <p>
-       
+
     </p>
 
     <label><b>New Password</b></label>
             <input type="Password" name="Password" value="" placeholder="Enter Password">
             <br>
-            
+
             <button type="submit">Reset Password</button>
 
 
            <?php ResetAlert(); //error Handler?>
 
    </form>
-    
+
+   <?php require_once('Lib/footer.php');?>
