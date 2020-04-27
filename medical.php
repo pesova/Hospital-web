@@ -34,8 +34,7 @@ $mydate = getdate(date("U"));
 
 
   <div class="Action">
-    <a class="login  btn btn-primary" href="index.php">Home</a>
-
+    
     <a class="login  btn btn-info" href="AllAppointments.php">All Appointments</a>
 
     <a class="login  btn btn-secondary" href="logout.php">Logout</a>

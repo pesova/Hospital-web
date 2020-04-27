@@ -22,7 +22,7 @@
 
 
 
-    <B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
+    <B class="lead font-weight-bolder" >Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
 
     <?php (getdate());
     echo "<br><br>";
@@ -38,16 +38,15 @@
     <br>
 
     <div class="Action">
-        <a href="index.php">Home</a>
+        
+        <a class="login  btn btn-info" href="BookAppointment.php">Book Appointment</a>
 
-        <a href="BookAppointment.php">Book Appointment</a>
+        <a class="login  btn btn-info" href="Paybills.php">Paybills</a>
 
-        <a href="Paybills.php">Paybills</a>
+        <a class="login  btn btn-secondary" href="logout.php">Logout</a>
       </div>
 
-    <div class="logout">
-        <a href="logout.php">Logout</a>
-    </div>
+
 <?php Appointment(); ?>
     </div>
 
